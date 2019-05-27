@@ -879,3 +879,12 @@ Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8
 Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 93.41.127.250 at 2019-05-27 10:08:06 +0000
 Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 93.41.127.250 at 2019-05-27 10:08:06 +0000
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 93.41.127.250 at 2019-05-27 10:08:06 +0000
+Started GET "/posts/1/edit" for 93.41.127.250 at 2019-05-27 10:08:13 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 24ms (Views: 20.1ms | ActiveRecord: 0.6ms)
+
+
