@@ -908,3 +908,23 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.6ms)
 
 
+Started PATCH "/posts/1" for 93.41.127.250 at 2019-05-27 10:08:52 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z0d97WhIfwVE4gkDHEf+CompIHJyaqenJfKiCH1e8B7H/7ix0Cq5f2eKOVE0lDR16qa9ajUlswIR6dMr9YEpbw==", "post"=>{"title"=>"Rails Introduction Quiz", "description"=>"asdfasdfllll"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Rails Introduction Quiz"], ["description", "asdfasdfllll"], ["updated_at", "2019-05-27 10:08:52.629656"], ["id", 1]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://178.128.194.189:58550/posts/1
+Completed 302 Found in 19ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/posts/1" for 93.41.127.250 at 2019-05-27 10:08:52 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.1ms)
+
+
